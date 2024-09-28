@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f3f5;
+    padding: 0 10px; /* Thêm padding để tránh bị tràn viền trên màn hình nhỏ */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Giới hạn chiều rộng tối đa */
+    width: 100%; /* Đảm bảo chiều rộng chiếm hết không gian có thể */
+    text-align: center;
+    transition: max-width 0.3s ease; /* Thêm chuyển tiếp mượt mà khi thay đổi kích thước */
+}
+
+.logo {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #00458B;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Màu viền mờ với độ trong suốt 0.2 */
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 3.5px solid rgba(0, 69, 139, 0.6); /* Màu viền xanh mờ khi focus với độ trong suốt 0.6 */
+    outline: none;
+}
+
+button.btn {
+    margin-top: 5px;
+ margin-right: 65%;
+    background-color:  #0f6cbf;
+    color: white;
+    padding: 10px;
+    width: 35%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.btn:hover {
+    background-color: #003366;
+}
+
+a.forgot-password {
+    margin-right: 250px;
+    display: block;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #00458B;
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 12px;
+    flex-direction: column; /* Cho màn hình nhỏ */
+}
+
+.footer select, .footer a {
+    margin: 5px 0; /* Khoảng cách giữa các mục khi cột */
+}
+
+/* Dấu gạch phân cách dài giữa 'Quên mật khẩu' và 'Vietnamese' */
+
+
+/* Vietnamese selector */
+#language-select {
+    margin-left: 5px;
+    border: none;
+    background: none;
+    color: #00458B;
+    cursor: pointer;
+}
+
+/* Media Query cho các màn hình nhỏ hơn (mobile) */
+@media (max-width: 576px) {
+    .login-box {
+        max-width: 90%; /* Sử dụng gần hết chiều rộng của màn hình nhỏ */
+    }
+
+    h2 {
+        font-size: 16px; /* Giảm kích thước chữ cho phù hợp */
+    }
+
+    input[type="text"], input[type="password"] {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    button.btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Media Query cho các màn hình lớn hơn (tablets, desktops) */
+@media (min-width: 768px) {
+    .login-box {
+        max-width: 400px; /* Tăng chiều rộng cho màn hình lớn */
+    }
+    
+    .footer {
+        flex-direction: row; /* Chuyển sang hàng ngang với màn hình lớn */
+    }
+
+    .footer select, .footer a {
+        margin: 0;
+    }
+}
+
+
+/* Khung màu xám cho 'Thông báo từ các Cookies' */
+.cookie-notification {
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: black;
+    background-color: #ced4da;
+   cursor:  pointer;
+}
+
+
+
+/* Thanh ngăn cách ngắn giữa 'Vietnamese' và 'Thông báo từ các Cookies' */
+.footer .divider {
+    height: 18px;
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
