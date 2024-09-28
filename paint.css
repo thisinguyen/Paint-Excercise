@@ -1,0 +1,233 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Page Layout */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Title Bar */
+.titlebar {
+  background-color: white;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.titlebar .window-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.titlebar .window-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Bar */
+.buttonbar {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #CCC;
+  margin-top: -4px;
+}
+
+.buttonbar button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.buttonbar button:hover {
+  background-color: #EAEAEA;
+}
+
+.buttonbar button.active {
+  background-color: #1A79CA;
+  padding: 10px 16px 24px;
+  width: 52px;
+  height: 20px;
+}
+
+/* Home and View Buttons */
+.buttonbar .home,
+.buttonbar .view {
+  color: black;
+  padding: 10px 12px 24px;
+  width: 52px;
+  height: 20px;
+  margin-left: -10px;
+}
+
+.buttonbar .home:hover,
+.buttonbar .view:hover {
+  background-color: #1A79CA;
+  color: white;
+}
+
+/* Menu Bar */
+.menubar {
+  background-color: #ECECEC;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: 1px solid grey;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+.menu-section + .menu-section::before {
+  content: "";
+  position: absolute;
+  left: -75px;
+  top: 0;
+  height: 95px;
+  width: 1px;
+  background-color: #CCC;
+}
+
+.menu-section button {
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.menu-section button:hover {
+  background-color: #EEE;
+}
+
+.section-title-clipboard{
+  margin-top: 10px;
+  margin-left: -40px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
+.section-title,
+.section-title-image {
+  margin-top: 5px;
+  margin-left: -80px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Section Content */
+.section-content {
+  margin-left: -30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Canvas Wrapper */
+.canvas-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEE;
+  padding: 20px;
+}
+
+.canvas {
+  background-color: white;
+  border: 2px solid #000;
+  width: 800px;
+  height: 500px;
+}
+
+/* Utility Classes */
+.heading {
+  cursor: pointer;
+}
+
+span {
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.drop_icon {
+  margin-top: 6px;
+}
+
+/* Button Sections */
+.btn-paste, 
+.btn-select, 
+.crop-resize, 
+.cut-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-select {
+  margin-left: -30px;
+}
+
+.crop-resize button {
+  margin: -1px;
+}
+
+.select-image {
+  width: 30px;
+}
+
+.cut-image, 
+.copy-image {
+  width: 20px;
+}
+
+.btn-cut, 
+.btn-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4px;
+}
+
+/* Override for Menu Section Buttons */
+.menu-section button {
+  background-color: #ECECEC;
+  border: none;
+  margin-right: 5px;
+}
+
+.menu-section button:hover {
+  background-color: #C9E0F7;
+}
