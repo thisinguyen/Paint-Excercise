@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
 </head>
 
 <body>
+
   <div class="page-wrapper">
 
     <!-- Title Bar -->
@@ -110,10 +112,11 @@
       <div class="menu-section">
         <div class="section-content">
           <button class="btn-brush">
-            <i class="fa fa-paint-brush"></i> Brush
+            <img src="Component 4/Brush icon.svg" alt="Brush icon" class="brush">
+            <span class="brush-text">Brushes</span>
+            <img src="Component 4/Drop icon.svg" alt="Dropdown Icon" class="drop_icon">
           </button>
         </div>
-        <div class="section-title">Brush</div>
       </div>
 
       <!-- Shapes Section -->
@@ -132,17 +135,12 @@
       <!-- Size Section -->
       <div class="menu-section">
         <div class="section-content">
-          <button class="btn-small">
-            <i class="fa fa-square"></i> Small
-          </button>
-          <button class="btn-medium">
-            <i class="fa fa-square"></i> Medium
-          </button>
-          <button class="btn-large">
-            <i class="fa fa-square"></i> Large
+          <button class="btn-size">
+            <img src="Component 7/Size icon.svg" alt="Size icon" class="size">
+            <span class="size-text">Size</span>
+            <img src="Component 7/Drop icon.svg" alt="Dropdown Icon" class="drop_icon">
           </button>
         </div>
-        <div class="section-title">Size</div>
       </div>
 
       <!-- Colors Section -->
@@ -154,13 +152,18 @@
         <div class="section-title">Colors</div>
       </div>
 
-    </div>
+      <!-- Canvas Area (contenteditable to allow direct drawing) -->
+      <div class="menu-section">
+        <div class="section-content">
+          <button class="btn-canvas"
+            style="background-image: url('Component 8/Edit with 3D.png'); width: 20px; height: 20px;">
+          </button>
+        </div>
+        <div class="canvas-text">Edit with Paint 3D</div>
+      </div>
 
-    <!-- Canvas Area (contenteditable to allow direct drawing) -->
-    <div class="canvas-wrapper">
-      <div class="canvas" contenteditable="true"></div>
     </div>
-    
   </div>
 </body>
+
 </html>

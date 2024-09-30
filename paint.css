@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   font-family: Arial, sans-serif;
 }
@@ -106,7 +107,7 @@ html, body {
   position: relative;
 }
 
-.menu-section + .menu-section::before {
+.menu-section+.menu-section::before {
   content: "";
   position: absolute;
   left: -75px;
@@ -129,7 +130,7 @@ html, body {
   background-color: #EEE;
 }
 
-.section-title-clipboard{
+.section-title-clipboard {
   margin-top: 10px;
   margin-left: -40px;
   font-weight: 400;
@@ -187,9 +188,9 @@ span {
 }
 
 /* Button Sections */
-.btn-paste, 
-.btn-select, 
-.crop-resize, 
+.btn-paste,
+.btn-select,
+.crop-resize,
 .cut-copy {
   display: flex;
   flex-direction: column;
@@ -208,17 +209,31 @@ span {
   width: 30px;
 }
 
-.cut-image, 
+.cut-image,
 .copy-image {
   width: 20px;
 }
 
-.btn-cut, 
+.btn-cut,
 .btn-copy {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: -4px;
+}
+
+/* Text */
+.brush-text {
+  display: block;
+}
+
+.size-text {
+  display: block;
+}
+
+.canvas-text {
+  word-wrap: break-word;
+  display: block;
 }
 
 /* Override for Menu Section Buttons */
