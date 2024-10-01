@@ -1,0 +1,500 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Page Layout */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Title Bar */
+.titlebar {
+  background-color: white;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.titlebar .window-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.titlebar .window-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Bar */
+.buttonbar {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #CCC;
+  margin-top: -4px;
+}
+
+.buttonbar button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.buttonbar button:hover {
+  background-color: #EAEAEA;
+}
+
+.buttonbar button.active {
+  background-color: #1A79CA;
+  padding: 10px 16px 24px;
+  width: 52px;
+  height: 20px;
+}
+
+/* Home and View Buttons */
+.buttonbar .home,
+.buttonbar .view {
+  color: black;
+  padding: 10px 12px 24px;
+  width: 52px;
+  height: 20px;
+  margin-left: -10px;
+}
+
+.buttonbar .home:hover,
+.buttonbar .view:hover {
+  background-color: #1A79CA;
+  color: white;
+}
+
+/* Menu Bar */
+.menubar {
+  background-color: #ECECEC;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: 1px solid grey;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+.menu-section+.menu-section::before {
+  content: "";
+  position: absolute;
+  left: -75px;
+  top: 0;
+  height: 95px;
+  width: 1px;
+  background-color: #CCC;
+}
+
+.menu-section button {
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.menu-section button:hover {
+  background-color: #EEE;
+}
+
+.section-title-clipboard {
+  margin-top: 10px;
+  margin-left: -40px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
+.section-title,
+.section-title-image {
+  margin-top: 5px;
+  margin-left: -80px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
+.section-title,
+.section-title-color {
+  margin-top: 5px;
+  margin-left: -80px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Section Content */
+.section-content {
+  margin-left: -30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Canvas Wrapper */
+.canvas-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEE;
+  padding: 20px;
+}
+
+.canvas {
+  background-color: white;
+  border: 2px solid #000;
+  width: 800px;
+  height: 500px;
+}
+
+/* Utility Classes */
+.heading {
+  cursor: pointer;
+}
+
+span {
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.drop_icon {
+  margin-top: 6px;
+}
+
+/* Button Sections */
+.btn-paste,
+.btn-select,
+.btn-color1,
+.btn-color2,
+.crop-resize,
+.cut-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-select {
+  margin-left: -30px;
+}
+
+.crop-resize button {
+  margin: -1px;
+}
+
+.select-image {
+  width: 30px;
+}
+
+.cut-image,
+.copy-image {
+  width: 20px;
+}
+
+.btn-cut,
+.btn-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4px;
+}
+
+/* Text */
+.brush-text {
+  display: block;
+}
+
+.size-text {
+  display: block;
+}
+
+.canvas-text {
+  word-wrap: break-word;
+  display: block;
+}
+
+.edit-color-text {
+  display: block;
+}
+
+/* Override for Menu Section Buttons */
+.menu-section button {
+  background-color: #ECECEC;
+  border: none;
+  margin-right: 5px;
+}
+
+.menu-section button:hover {
+  background-color: #C9E0F7;
+}
+
+/* Root Variables for Colors */
+:root {
+  --button1-inner: #FC0000; 
+  --button2-inner: #0000FF; 
+  --button1-small-inner: #1c6b86; 
+  --button2-small-inner: #22451b; 
+  --button3-small-inner: #1c8628; 
+  --button4-small-inner: #861c1c; 
+  --button5-small-inner: #861c56; 
+  --button6-small-inner: #211c86; 
+  --button7-small-inner: #861c63; 
+  --button8-small-inner: #1c7186; 
+  --button9-small-inner: #1c6b86; 
+  --button10-small-inner: #3a9245; 
+  --button11-small-inner: #1c6b86; 
+  --button12-small-inner: #39aed5; 
+  --button13-small-inner: #25bcef; 
+  --button14-small-inner: #88ff32; 
+  --button15-small-inner: #353e41; 
+  --button16-small-inner: #1c6b86; 
+  --button17-small-inner: #22ba5c; 
+  --button18-small-inner: #d8c817; 
+  --button19-small-inner: #ffffff; 
+  --button20-small-inner: #ffffff; 
+  --button21-small-inner: #ffffff; 
+  --button22-small-inner: #ffffff; 
+  --button23-small-inner: #ffffff;  
+  --button24-small-inner: #ffffff; 
+  --button25-small-inner: #ffffff; 
+  --button26-small-inner: #ffffff; 
+  --button27-small-inner: #ffffff; 
+  --button28-small-inner: #ffffff; 
+  --button29-small-inner: #ffffff; 
+  --button30-small-inner: #ffffff; 
+  --button31-small-inner: #ffffff;  
+  --button33-small-inner: #ffffff; 
+
+}
+
+/* Color frame */
+.color-frame {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  background-color: #ffffff;
+  padding: 2px;
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
+}
+
+.color-frame-inside {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+}
+
+/* Color small frame */
+.color-small-frame {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  background-color: #ffffff;
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+.color-small-frame-inside {
+  width: 12px;
+  height: 12px; 
+  position: absolute;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+/* Button 1 styles */
+.btn-color1 .color-frame-inside {
+  background-color: var(--button1-inner); 
+}
+/* Button 2 styles */
+.btn-color2 .color-frame-inside {
+  background-color: var(--button2-inner); 
+}
+
+/* Small Button 1 styles */
+.btn-small-color1 .color-small-frame-inside {
+  background-color: var(--button1-small-inner); 
+}
+
+/* Small Button 2 styles */
+.btn-small-color2 .color-small-frame-inside {
+  background-color: var(--button2-small-inner);
+}
+
+/* Small Button 3 styles */
+.btn-small-color3 .color-small-frame-inside {
+  background-color: var(--button3-small-inner);
+}
+
+/* Small Button 4 styles */
+.btn-small-color4 .color-small-frame-inside {
+  background-color: var(--button4-small-inner);
+}
+
+/* Small Button 5 styles */
+.btn-small-color5 .color-small-frame-inside {
+  background-color: var(--button5-small-inner);
+}
+
+/* Small Button 6 styles */
+.btn-small-color6 .color-small-frame-inside {
+  background-color: var(--button6-small-inner);
+}
+
+/* Small Button 7 styles */
+.btn-small-color7 .color-small-frame-inside {
+  background-color: var(--button7-small-inner);
+}
+
+/* Small Button 8 styles */
+.btn-small-color8 .color-small-frame-inside {
+  background-color: var(--button8-small-inner);
+}
+
+/* Small Button 9 styles */
+.btn-small-color9 .color-small-frame-inside {
+  background-color: var(--button9-small-inner);
+}
+
+/* Small Button 10 styles */
+.btn-small-color10 .color-small-frame-inside {
+  background-color: var(--button10-small-inner);
+}
+
+/* Small Button 11 styles */
+.btn-small-color11 .color-small-frame-inside {
+  background-color: var(--button11-small-inner);
+}
+
+/* Small Button 12 styles */
+.btn-small-color12 .color-small-frame-inside {
+  background-color: var(--button12-small-inner);
+}
+
+/* Small Button 13 styles */
+.btn-small-color13 .color-small-frame-inside {
+  background-color: var(--button13-small-inner);
+}
+
+/* Small Button 14 styles */
+.btn-small-color14 .color-small-frame-inside {
+  background-color: var(--button14-small-inner);
+}
+
+/* Small Button 15 styles */
+.btn-small-color15 .color-small-frame-inside {
+  background-color: var(--button15-small-inner);
+}
+
+/* Small Button 16 styles */
+.btn-small-color16 .color-small-frame-inside {
+  background-color: var(--button16-small-inner);
+}
+
+/* Small Button 17 styles */
+.btn-small-color17 .color-small-frame-inside {
+  background-color: var(--button17-small-inner);
+}
+
+/* Small Button 18 styles */
+.btn-small-color18 .color-small-frame-inside {
+  background-color: var(--button18-small-inner);
+}
+
+/* Small Button 19 styles */
+.btn-small-color19 .color-small-frame-inside {
+  background-color: var(--button19-small-inner);
+}
+
+/* Small Button 20 styles */
+.btn-small-color20 .color-small-frame-inside {
+  background-color: var(--button20-small-inner);
+}
+
+/* Small Button 21 styles */
+.btn-small-color21 .color-small-frame-inside {
+  background-color: var(--button21-small-inner);
+}
+
+/* Small Button 22 styles */
+.btn-small-color22 .color-small-frame-inside {
+  background-color: var(--button22-small-inner);
+}
+
+/* Small Button 23 styles */
+.btn-small-color23 .color-small-frame-inside {
+  background-color: var(--button23-small-inner);
+}
+
+/* Small Button 24 styles */
+.btn-small-color24 .color-small-frame-inside {
+  background-color: var(--button24-small-inner);
+}
+
+/* Small Button 25 styles */
+.btn-small-color25 .color-small-frame-inside {
+  background-color: var(--button25-small-inner);
+}
+
+/* Small Button 26 styles */
+.btn-small-color26 .color-small-frame-inside {
+  background-color: var(--button26-small-inner);
+}
+
+/* Small Button 27 styles */
+.btn-small-color27 .color-small-frame-inside {
+  background-color: var(--button27-small-inner);
+}
+
+/* Button Grid */
+.button-grid {
+  display: grid;
+  width: 212px;
+  height: 60;
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  
+}
+
+/* Button Row */
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr); /* 11 columns */
+}
