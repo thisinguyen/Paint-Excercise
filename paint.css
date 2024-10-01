@@ -147,6 +147,15 @@ body {
   text-align: center;
 }
 
+.section-title,
+.section-title-color {
+  margin-top: 5px;
+  margin-left: -80px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
 /* Section Content */
 .section-content {
   margin-left: -30px;
@@ -190,6 +199,8 @@ span {
 /* Button Sections */
 .btn-paste,
 .btn-select,
+.btn-color1,
+.btn-color2,
 .crop-resize,
 .cut-copy {
   display: flex;
@@ -236,6 +247,10 @@ span {
   display: block;
 }
 
+.edit-color-text {
+  display: block;
+}
+
 /* Override for Menu Section Buttons */
 .menu-section button {
   background-color: #ECECEC;
@@ -245,4 +260,241 @@ span {
 
 .menu-section button:hover {
   background-color: #C9E0F7;
+}
+
+/* Root Variables for Colors */
+:root {
+  --button1-inner: #FC0000; 
+  --button2-inner: #0000FF; 
+  --button1-small-inner: #1c6b86; 
+  --button2-small-inner: #22451b; 
+  --button3-small-inner: #1c8628; 
+  --button4-small-inner: #861c1c; 
+  --button5-small-inner: #861c56; 
+  --button6-small-inner: #211c86; 
+  --button7-small-inner: #861c63; 
+  --button8-small-inner: #1c7186; 
+  --button9-small-inner: #1c6b86; 
+  --button10-small-inner: #3a9245; 
+  --button11-small-inner: #1c6b86; 
+  --button12-small-inner: #39aed5; 
+  --button13-small-inner: #25bcef; 
+  --button14-small-inner: #88ff32; 
+  --button15-small-inner: #353e41; 
+  --button16-small-inner: #1c6b86; 
+  --button17-small-inner: #22ba5c; 
+  --button18-small-inner: #d8c817; 
+  --button19-small-inner: #ffffff; 
+  --button20-small-inner: #ffffff; 
+  --button21-small-inner: #ffffff; 
+  --button22-small-inner: #ffffff; 
+  --button23-small-inner: #ffffff;  
+  --button24-small-inner: #ffffff; 
+  --button25-small-inner: #ffffff; 
+  --button26-small-inner: #ffffff; 
+  --button27-small-inner: #ffffff; 
+  --button28-small-inner: #ffffff; 
+  --button29-small-inner: #ffffff; 
+  --button30-small-inner: #ffffff; 
+  --button31-small-inner: #ffffff;  
+  --button33-small-inner: #ffffff; 
+
+}
+
+/* Color frame */
+.color-frame {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  background-color: #ffffff;
+  padding: 2px;
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
+}
+
+.color-frame-inside {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+}
+
+/* Color small frame */
+.color-small-frame {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  background-color: #ffffff;
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+.color-small-frame-inside {
+  width: 12px;
+  height: 12px; 
+  position: absolute;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+/* Button 1 styles */
+.btn-color1 .color-frame-inside {
+  background-color: var(--button1-inner); 
+}
+/* Button 2 styles */
+.btn-color2 .color-frame-inside {
+  background-color: var(--button2-inner); 
+}
+
+/* Small Button 1 styles */
+.btn-small-color1 .color-small-frame-inside {
+  background-color: var(--button1-small-inner); 
+}
+
+/* Small Button 2 styles */
+.btn-small-color2 .color-small-frame-inside {
+  background-color: var(--button2-small-inner);
+}
+
+/* Small Button 3 styles */
+.btn-small-color3 .color-small-frame-inside {
+  background-color: var(--button3-small-inner);
+}
+
+/* Small Button 4 styles */
+.btn-small-color4 .color-small-frame-inside {
+  background-color: var(--button4-small-inner);
+}
+
+/* Small Button 5 styles */
+.btn-small-color5 .color-small-frame-inside {
+  background-color: var(--button5-small-inner);
+}
+
+/* Small Button 6 styles */
+.btn-small-color6 .color-small-frame-inside {
+  background-color: var(--button6-small-inner);
+}
+
+/* Small Button 7 styles */
+.btn-small-color7 .color-small-frame-inside {
+  background-color: var(--button7-small-inner);
+}
+
+/* Small Button 8 styles */
+.btn-small-color8 .color-small-frame-inside {
+  background-color: var(--button8-small-inner);
+}
+
+/* Small Button 9 styles */
+.btn-small-color9 .color-small-frame-inside {
+  background-color: var(--button9-small-inner);
+}
+
+/* Small Button 10 styles */
+.btn-small-color10 .color-small-frame-inside {
+  background-color: var(--button10-small-inner);
+}
+
+/* Small Button 11 styles */
+.btn-small-color11 .color-small-frame-inside {
+  background-color: var(--button11-small-inner);
+}
+
+/* Small Button 12 styles */
+.btn-small-color12 .color-small-frame-inside {
+  background-color: var(--button12-small-inner);
+}
+
+/* Small Button 13 styles */
+.btn-small-color13 .color-small-frame-inside {
+  background-color: var(--button13-small-inner);
+}
+
+/* Small Button 14 styles */
+.btn-small-color14 .color-small-frame-inside {
+  background-color: var(--button14-small-inner);
+}
+
+/* Small Button 15 styles */
+.btn-small-color15 .color-small-frame-inside {
+  background-color: var(--button15-small-inner);
+}
+
+/* Small Button 16 styles */
+.btn-small-color16 .color-small-frame-inside {
+  background-color: var(--button16-small-inner);
+}
+
+/* Small Button 17 styles */
+.btn-small-color17 .color-small-frame-inside {
+  background-color: var(--button17-small-inner);
+}
+
+/* Small Button 18 styles */
+.btn-small-color18 .color-small-frame-inside {
+  background-color: var(--button18-small-inner);
+}
+
+/* Small Button 19 styles */
+.btn-small-color19 .color-small-frame-inside {
+  background-color: var(--button19-small-inner);
+}
+
+/* Small Button 20 styles */
+.btn-small-color20 .color-small-frame-inside {
+  background-color: var(--button20-small-inner);
+}
+
+/* Small Button 21 styles */
+.btn-small-color21 .color-small-frame-inside {
+  background-color: var(--button21-small-inner);
+}
+
+/* Small Button 22 styles */
+.btn-small-color22 .color-small-frame-inside {
+  background-color: var(--button22-small-inner);
+}
+
+/* Small Button 23 styles */
+.btn-small-color23 .color-small-frame-inside {
+  background-color: var(--button23-small-inner);
+}
+
+/* Small Button 24 styles */
+.btn-small-color24 .color-small-frame-inside {
+  background-color: var(--button24-small-inner);
+}
+
+/* Small Button 25 styles */
+.btn-small-color25 .color-small-frame-inside {
+  background-color: var(--button25-small-inner);
+}
+
+/* Small Button 26 styles */
+.btn-small-color26 .color-small-frame-inside {
+  background-color: var(--button26-small-inner);
+}
+
+/* Small Button 27 styles */
+.btn-small-color27 .color-small-frame-inside {
+  background-color: var(--button27-small-inner);
+}
+
+/* Button Grid */
+.button-grid {
+  display: grid;
+  width: 212px;
+  height: 60;
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  
+}
+
+/* Button Row */
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr); /* 11 columns */
 }
