@@ -246,3 +246,54 @@ span {
 .menu-section button:hover {
   background-color: #C9E0F7;
 }
+
+/*change
+/* Styles for Shapes Section Icons */
+
+.shapes-icons {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Sắp xếp icon thành 5 cột */
+  gap: 10px; /* Khoảng cách giữa các button */
+  flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-shape {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px; /* Thêm padding để tạo khoảng cách xung quanh icon */
+}
+
+.shape-image {
+  width: 10px; /* Kích thước chiều rộng của icon */
+  height: 10px; /* Kích thước chiều cao của icon */
+  object-fit: contain; /* Đảm bảo rằng hình ảnh không bị biến dạng */
+}
+
+.shapes-controls {
+  display: flex;
+  justify-content: space-between; /* Căn giữa các nút điều khiển */
+  margin-top: 10px; /* Khoảng cách giữa các nút và phần trước đó */
+}
+
+.btn-outline, .btn-fill {
+  border: none;
+  background-color: #f5f5f5; /* Màu nền cho nút */
+  padding: 5px 10px; /* Khoảng cách bên trong nút */
+  cursor: pointer; /* Con trỏ khi hover */
+}
+
+.btn-outline:hover, .btn-fill:hover {
+  background-color: #C9E0F7; /* Màu nền khi hover */
+}
+
+.section-title {
+  text-align: center; /* Căn giữa tiêu đề */
+  margin-top: 15px; /* Khoảng cách phía trên tiêu đề */
+  font-weight: bold; /* Độ đậm của chữ */
+}
+
+
+
