@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint Menu Interface</title>
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="paint.css">
+  <!-- Linking Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Linking JavaScript file -->
+  <script src="paint.js"></script>
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Title Bar -->
+    <div class="titlebar">
+      <img src="heading.jpg" alt="Heading Image" class="heading">
+    </div>
+
+    <!-- Button Bar (File, Home, View buttons) -->
+    <div class="buttonbar">
+      <button class="active">File</button>
+      <button class="home">Home</button>
+      <button class="view">View</button>
+    </div>
+
+    <!-- Menu Bar with various sections -->
+    <div class="menubar">
+
+      <!-- Clipboard Section -->
+      <div class="menu-section">
+        <div class="section-content">
+          <button class="btn-paste">
+            <img src="Component 1/Paste icon.svg" alt="Paste Icon" class="paste">
+            <span>Paste</span>
+            <img src="Component 1/Drop icon.svg" alt="Dropdown Icon" class="drop_icon">
+          </button>
+
+          <div class="cut-copy">
+            <button class="btn-cut">
+              <img src="Component 1/Cut icon.svg" alt="Cut Icon" class="cut-image">
+              <span>Cut</span>
+            </button>
+
+            <button class="btn-copy">
+              <img src="Component 1/Copy icon.svg" alt="Copy Icon" class="copy-image">
+              <span>Copy</span>
+            </button>
+          </div>
+        </div>
+        <div class="section-title-clipboard">Clipboard</div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="menu-section">
+        <div class="section-content">
+          <button class="btn-select">
+            <img src="Component 2/Select icon.svg" alt="Select Icon" class="select-image">
+            <span>Select</span>
+            <img src="Component 2/Drop icon.svg" alt="Dropdown Icon" class="drop_icon">
+          </button>
+
+          <div class="crop-resize">
+            <button class="btn-crop">
+              <img src="Component 2/Crop icon.svg" alt="Crop Icon" class="crop-image">
+              <span>Crop</span>
+            </button>
+            <button class="btn-resize">
+              <img src="Component 2/Resize icon.svg" alt="Resize Icon" class="resize-image">
+              <span>Resize</span>
+            </button>
+            <button class="btn-rotate">
+              <img src="Component 2/Rotate icon.svg" alt="Rotate Icon" class="rotate-image">
+              <span>Rotate</span>
+            </button>
+          </div>
+        </div>
+        <div class="section-title-image">Image</div>
+      </div>
+
+      <!-- Tools Section -->
+      <div class="menu-section">
+        <div class="top">
+          <button class="btn-pen">
+            <img src="Component 3/Pen icon.svg" alt="Pen Icon" class="pencil-image">
+          </button>
+          <button class="btn-fill">
+            <img src="Component 3/Fill icon.svg" alt="Fill Icon" class="brush-image">
+          </button>
+          <button class="btn-eraser">
+            <img src="Component 3/Eraser icon.svg" alt="Eraser Icon" class="eraser-image">
+          </button>
+        </div>
+        <div class="bottom">
+          <button class="btn-dropper">
+            <img src="Component 3/Dropper icon.svg" alt="Dropper Icon" class="dropper-image">
+          </button>
+          <button class="btn-magnify">
+            <img src="Component 3/Magnify icon.svg" alt="Magnify Icon" class="magnify-image">
+          </button>
+          <button class="btn-text">
+            <img src="Component 3/Text icon.svg" alt="Text Icon" class="text-image">
+          </button>
+        </div>
+        <div class="section-title-tool">Tools</div>
+      </div>
+
+      <!-- Brush Section -->
+      <div class="menu-section">
+        <div class="section-content">
+          <button class="btn-brush">
+            <img src="Component 4/Brush icon.svg" alt="Brush icon" class="brush">
+            <span class="brush-text">Brushes</span>
+            <img src="Component 4/Drop icon.svg" alt="Dropdown Icon" class="drop_icon">
+          </button>
+        </div>
+      </div>
+
+      <!-- Shapes Section -->
+      <div class="menu-section">
+        <div class="shapes-icons">
+          <div class="shape_first">
+            <button class="btn-shape"><img src="Component 5/Line icon.svg" alt="Dropper Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Curve icon.svg" alt="Curve Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Ellipse icon.svg" alt="Eraser Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Rectangle icon.svg" alt="Rectangle Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Rectangle cornerd icon.svg" alt="Pen Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Shape 1 icon.svg" alt="Eraser Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Triangle icon.svg" alt="Text Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Upper icon.svg" alt="Dropper Icon"
+                style="width: 6px;height: 6px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Outline icon.svg" alt="Text Icon"
+                style="width: 15px;height: 20px;" class="shape-image"></button>
+            <span>Outline</span>
+          </div>
+
+          <div class="shape_second">
+            <button class="blue-shape"><img src="Component 5/Shape 4 icon.svg" alt="Dropper Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 2 icon.svg" alt="Eraser Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 3 icon.svg" alt="Magnify Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 5 icon.svg" alt="Text Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 6 icon.svg" alt="Pen Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 7 icon.svg" alt="Fill Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 8 icon.svg" alt="Eraser Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Down icon.svg" alt="Down Icon"
+                style="width: 6px;height: 6px;" class="shape-image"></button>
+          </div>
+
+          <div class="shape_third">
+            <button class="blue-shape"><img src="Component 5/Shape 9 icon.svg" alt="Magnify Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 10 icon.svg" alt="Magnify Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 11 icon.svg" alt="Dropper Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 12 icon.svg" alt="Text Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 13 icon.svg" alt="Pen Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 14 icon.svg" alt="Fill Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="blue-shape"><img src="Component 5/Shape 15 icon.svg" alt="Fill Icon"
+                style="width: 15px;height: 15px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Supper down icon.svg" alt="Dropper Icon"
+                style="width: 8px;height: 8px;" class="shape-image"></button>
+            <button class="btn-shape"><img src="Component 5/Fill icon.svg" alt="Magnify Icon"
+                style="width: 15px;height: 20px;" class="shape-image"></button>
+            <span>Fill</span>
+          </div>
+        </div>
+        <span>Shapes</span>
+      </div>
+
+      <!-- Size Section -->
+      <div class="menu-section">
+        <div class="section-content">
+          <div class="size-com">
+            <button class="btn-size">
+              <img src="Component 7/Size icon.svg" alt="Size icon" class="size">
+              <span class="size-text">Size</span>
+              <img src="Component 7/Drop icon.svg" alt="Dropdown Icon" class="drop_icon">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color Picker -->
+      <div class="menu-section">
+        <div class="section-content">
+          <div class="color-box-choose" style="background-color: red;"></div>
+          <p>Color 1</p>
+          <div class="color-box-choose" style="background-color: white;"></div>
+          <p>Color 2</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Section (Example: Patterns Section) -->
+    <div class="menu-section">
+      <div class="section-content">
+        <button class="btn-pattern-1"
+          style="background-image: url('pattern1.jpg'); width: 20px; height: 20px;"></button>
+        <button class="btn-pattern-2"
+          style="background-image: url('pattern2.jpg'); width: 20px; height: 20px;"></button>
+      </div>
+      <div class="section-title">Patterns</div>
+    </div>
+
+    <!-- Canvas Area (contenteditable to allow direct drawing) -->
+    <div class="menu-section">
+      <div class="section-content">
+        <button class="btn-canvas"
+          style="background-image: url('Component 8/Edit with 3D.png'); width: 20px; height: 20px;">
+        </button>
+      </div>
+      <div class="canvas-text">Edit with Paint 3D</div>
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>
